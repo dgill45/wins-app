@@ -7,7 +7,7 @@ const AddTask = ({ onTaskAdded }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/tasks', { name: taskName }).then((response) => {
+    axios.post('http://localhost:5000/api/tasks', { name: taskName }).then((response) => {
       onTaskAdded(response.data);
       setTaskName('');
     });

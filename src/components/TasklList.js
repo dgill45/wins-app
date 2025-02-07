@@ -8,7 +8,7 @@ const TaskList = () => {
 
   useEffect(() => {
     // Fetch tasks from backend (mock API for now)
-    axios.get('/api/tasks').then((response) => {
+    axios.get('http://localhost:5000/api/tasks').then((response) => {
       setTasks(response.data);
     });
   }, []);
